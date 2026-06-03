@@ -47,17 +47,6 @@ def load_tools():
 async def health():
     return JSONResponse({"status": "ok", "visit_count": _visit_count, "tools_count": len(load_tools())})
 
-# Google Search Console verification: serve google*.html from static/ at root
-@app.get("/{filename}", response_class=HTMLResponse)
-async def google_verify(filename: str):
-    if filename.startswith("google") and filename.endswith(".html"):
-        import os as _os
-        path = _os.path.join(BASE, "static", filename)
-        if _os.path.exists(path):
-            with open(path) as f:
-                return HTMLResponse(content=f.read())
-    return HTMLResponse(content="Not Found", status_code=404)
-
 @app.get("/robots.txt", response_class=Response)
 async def robots():
     body = f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n"
@@ -122,3 +111,13 @@ async def tool_detail(tool_id: str, request: Request):
     if not tool: return env.get_template("404.html").render()
     related = [t for t in tools if t["cat"] == tool["cat"] and t["id"] != tool_id][:4]
     return env.get_template("tool.html").render(tool=tool, related=related, request=request)
+
+# Google verification: serve google*.html from static/ at root (must be last)
+@app.get("/{filename}", response_class=HTMLResponse)
+async def google_verify(filename: str):
+    if filename.startswith("google") and filename.endswith(".html"):
+        path = os.path.join(BASE, "static", filename)
+        if os.path.exists(path):
+            with open(path) as f:
+                return HTMLResponse(content=f.read())
+    return env.get_template("404.html").render()
