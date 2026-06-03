@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI工具导航 — 发现最好用的 AI 工具大全</title>
+<meta name="description" content="收录 90+ 精选 AI 工具，覆盖对话、绘画、视频、编程、写作、设计等 12 大品类。搜索工具名直接跳转。">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🤖 AI工具导航</a>
+    <div class="nav-links"><a href="#categories">分类</a><a href="#about">关于</a></div>
+    <form action="/" method="get" style="display:flex;flex:1;min-width:160px;max-width:300px;gap:0">
+      <input name="q" class="nav-search" placeholder="输入工具名直接跳转..." autocomplete="off">
+    </form>
+  </div>
+</nav>
+
+<section class="hero-full">
+  <div class="hero-content">
+    <h1>发现最好的 <span class="gradient-text">AI 工具</span></h1>
+    <p class="hero-sub">输入工具名直接跳转 · 收录 <strong>90+</strong> 个精选 AI 工具</p>
+    <form action="/" method="get" class="hero-search-wrap">
+      <input name="q" class="hero-search" placeholder="输入工具名，如 ChatGPT、Midjourney..." autocomplete="off" autofocus>
+      <button type="submit" class="hero-search-btn">🔍</button>
+    </form>
+    <div class="hero-tags">
+      <span>热门：</span>
+      <a href="/?q=ChatGPT" class="htag">ChatGPT</a>
+      <a href="/?q=Claude" class="htag">Claude</a>
+      <a href="/?q=Midjourney" class="htag">Midjourney</a>
+      <a href="/?q=Suno" class="htag">Suno</a>
+      <a href="/?q=Cursor" class="htag">Cursor</a>
+      <a href="/?q=DeepSeek" class="htag">DeepSeek</a>
+      <a href="/?q=Perplexity" class="htag">Perplexity</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat-item"><div class="stat-num">90+</div><div class="stat-label">精选工具</div></div>
+  <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">分类</div></div>
+  <div class="stat-item"><div class="stat-num">每周</div><div class="stat-label">持续更新</div></div>
+  <div class="stat-item"><div class="stat-num">免费</div><div class="stat-label">永久使用</div></div>
+</section>
+
+<section id="categories" class="section">
+  <div class="section-header"><h2>📂 浏览分类</h2></div>
+  <div class="cat-bar"><div class="cat-list">
+    <a href="/" class="cat-tag {% if not active_cat %}active{% endif %}">全部 ({{ cat_counts.values()|sum }})</a>
+    {% for cat in categories %}
+    <a href="/?cat={{ cat }}" class="cat-tag {% if active_cat == cat %}active{% endif %}">{{ cat }} ({{ cat_counts.get(cat, 0) }})</a>
+    {% endfor %}
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <h2>🛠️ {% if active_cat %}{{ active_cat }}{% else %}全部工具{% endif %}</h2>
+    <span class="section-count">{{ tools|length }} 个工具</span>
+  </div>
+  <div class="grid">
+    {% for t in tools %}
+    <a href="/tool/{{ t.id }}" class="card">
+      <span class="card-fav" onclick="event.preventDefault();this.classList.toggle('liked')">❤️</span>
+      <img class="card-icon" src="{{ t.favicon }}" alt="{{ t.name }}" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-name">{{ t.name }}</div>
+      <div class="card-desc">{{ t.desc }}</div>
+      <div class="card-meta">
+        <span class="card-cat">{{ t.cat_name }}</span>
+        <span class="card-price price-{{ t.price|lower }}">{{ t.price }}</span>
+      </div>
+      <div class="card-hover-btn">访问 →</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta"><h2>没找到你想要的？</h2><p>提交你的 AI 工具，加入精选目录</p>
+  <form class="cta-form" onsubmit="event.preventDefault();alert('感谢提交！')">
+    <input type="url" placeholder="输入工具网址..." required><button type="submit">提交工具</button>
+  </form>
+</section>
+
+<footer id="about" class="footer-full">
+  <div class="footer-grid">
+    <div class="footer-col"><h4>关于</h4><p>AI 工具导航 — 输入工具名，一键直达。收录 90+ 精选 AI 工具，覆盖 12 大品类。</p></div>
+    <div class="footer-col"><h4>热门分类</h4><ul>{% for cat in categories[:6] %}<li><a href="/?cat={{ cat }}">{{ cat }}</a></li>{% endfor %}</ul></div>
+    <div class="footer-col"><h4>链接</h4><ul><li><a href="#">提交工具</a></li><li><a href="#">关于我们</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2026 AI工具导航 · 让 AI 为你所用</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{{ tool.name }} - AI工具导航 | {{ tool.cat_name }}工具推荐</title>
+<meta name="description" content="{{ tool.name }}：{{ tool.desc }}。访问官网了解更多。">
+<link rel="canonical" href="{{ request.url }}">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🤖 AI工具导航</a>
+    <a href="/" class="nav-btn outline">← 返回首页</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">首页</a> > <a href="/?cat={{ tool.cat_name }}">{{ tool.cat_name }}</a> > {{ tool.name }}
+</div>
+
+<div class="detail">
+  <img class="detail-icon" src="{{ tool.favicon }}" alt="{{ tool.name }}" onerror="this.style.display='none'">
+  <div class="detail-name">{{ tool.name }}
+    <span class="card-price price-{{ tool.price|lower }}" style="font-size:14px;vertical-align:middle;margin-left:10px">{{ tool.price }}</span>
+  </div>
+  <div class="detail-desc">{{ tool.desc }}</div>
+  <div class="detail-tags">
+    {% for tag in tool.tags %}<span class="detail-tag">{{ tag }}</span>{% endfor %}
+  </div>
+  <a href="{{ tool.url }}" target="_blank" rel="noopener" class="detail-btn">🔗 访问官网</a>
+  <br>
+  <a href="/" class="detail-back">← 返回首页</a>
+</div>
+
+{% if related %}
+<section class="section">
+  <div class="section-header"><h2>📂 同分类推荐</h2></div>
+  <div class="grid">
+    {% for t in related %}
+    <a href="/tool/{{ t.id }}" class="card">
+      <img class="card-icon" src="{{ t.favicon }}" alt="{{ t.name }}" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-name">{{ t.name }}</div>
+      <div class="card-desc">{{ t.desc }}</div>
+      <div class="card-meta">
+        <span class="card-cat">{{ t.cat_name }}</span>
+        <span class="card-price price-{{ t.price|lower }}">{{ t.price }}</span>
+      </div>
+      <div class="card-hover-btn">访问 →</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<footer class="footer-full">
+  <div class="footer-bottom" style="border:none">© 2026 AI工具导航</div>
+</footer>
+
+</body>
+</html>

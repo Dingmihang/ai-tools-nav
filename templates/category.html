@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{{ cat_name }} - AI工具导航 | 最好的{{ cat_name }}工具合集</title>
+<meta name="description" content="{{ cat_name }}分类下的所有 AI 工具，共 {{ tools|length }} 个。发现最好的{{ cat_name }}工具。">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🤖 AI工具导航</a>
+    <a href="/" class="nav-btn outline">← 返回首页</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><a href="/">首页</a> > {{ cat_name }}</div>
+<div class="cat-title">{{ cat_name }} <span style="font-weight:400;color:#94A3B8;font-size:16px">({{ tools|length }} 个工具)</span></div>
+
+<div class="section">
+  <div class="grid">
+    {% for t in tools %}
+    <a href="/tool/{{ t.id }}" class="card">
+      <img class="card-icon" src="{{ t.favicon }}" alt="{{ t.name }}" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-name">{{ t.name }}</div>
+      <div class="card-desc">{{ t.desc }}</div>
+      <div class="card-meta">
+        <span class="card-cat">{{ t.cat_name }}</span>
+        <span class="card-price price-{{ t.price|lower }}">{{ t.price }}</span>
+      </div>
+      <div class="card-hover-btn">访问 →</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<footer class="footer-full">
+  <div class="footer-bottom" style="border:none">© 2026 AI工具导航</div>
+</footer>
+
+</body>
+</html>

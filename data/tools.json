@@ -1,0 +1,1351 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "icon": "🤖",
+    "desc": "OpenAI 全能 AI 对话助手，支持文本、图像、代码多模态交互",
+    "url": "https://chatgpt.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话",
+      "写作",
+      "编程"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "icon": "🧠",
+    "desc": "Anthropic 注重安全性和长上下文的理解型 AI 助手",
+    "url": "https://claude.ai",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话",
+      "长文本",
+      "编程"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "icon": "🐳",
+    "desc": "幻方量化推出的开源大模型 AI 助手，推理能力极强",
+    "url": "https://chat.deepseek.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话",
+      "推理",
+      "开源"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "icon": "💎",
+    "desc": "Google 多模态 AI 助手，深度集成 Google 生态",
+    "url": "https://gemini.google.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话",
+      "多模态",
+      "搜索"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "icon": "⚡",
+    "desc": "xAI（马斯克）AI 助手，风格幽默直率，实时接入 X 平台",
+    "url": "https://grok.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话",
+      "实时",
+      "社交"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi",
+    "icon": "🌙",
+    "desc": "月之暗面长文本 AI 助手，擅长处理超长文档",
+    "url": "https://kimi.moonshot.cn",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话",
+      "长文本",
+      "文档"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "icon": "🎨",
+    "desc": "顶级 AI 图像生成工具，以艺术风格和创意质量著称",
+    "url": "https://www.midjourney.com",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "生成",
+      "艺术",
+      "创意"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "dalle",
+    "name": "DALL·E 3",
+    "icon": "🖼️",
+    "desc": "OpenAI 文生图模型，内置于 ChatGPT 中",
+    "url": "https://openai.com/dall-e-3",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "生成",
+      "对话",
+      "创意"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "stablediffusion",
+    "name": "Stable Diffusion",
+    "icon": "🌟",
+    "desc": "Stability AI 开源文生图模型，可本地部署",
+    "url": "https://stability.ai",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "生成",
+      "开源",
+      "本地"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "liblibai",
+    "name": "LiblibAI",
+    "icon": "🦊",
+    "desc": "国内领先 AI 图像创作平台和模型分享社区",
+    "url": "https://www.liblibai.com",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "生成",
+      "社区",
+      "模型"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "icon": "🎬",
+    "desc": "OpenAI 文生视频大模型，可生成长达 60 秒高质量视频",
+    "url": "https://sora.com",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "生成",
+      "高质量",
+      "创意"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "runway",
+    "name": "Runway Gen-3",
+    "icon": "🎥",
+    "desc": "专业级 AI 视频生成和编辑平台，支持多种视频特效",
+    "url": "https://runwayml.com",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "生成",
+      "编辑",
+      "特效"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "icon": "👤",
+    "desc": "专业 AI 数字人视频创作平台，支持语音克隆",
+    "url": "https://www.heygen.com",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "数字人",
+      "语音",
+      "翻译"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "copilot",
+    "name": "GitHub Copilot",
+    "icon": "💻",
+    "desc": "GitHub AI 编程助手，集成主流 IDE",
+    "url": "https://github.com/features/copilot",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "IDE",
+      "补全",
+      "Copilot"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "icon": "🖱️",
+    "desc": "AI-first 代码编辑器，支持自然语言生成和修改代码",
+    "url": "https://www.cursor.com",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "编辑器",
+      "生成",
+      "重构"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "icon": "🌊",
+    "desc": "Codeium 推出的 AI 编程 IDE，专注 Agentic 编程体验",
+    "url": "https://codeium.com/windsurf",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "IDE",
+      "Agent",
+      "重构"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "icon": "✍️",
+    "desc": "企业级 AI 内容营销和品牌文案生成平台",
+    "url": "https://www.jasper.ai",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "营销",
+      "品牌",
+      "文案"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "copyai",
+    "name": "Copy.ai",
+    "icon": "📝",
+    "desc": "面向营销团队的 AI 文案写作和内容生成工具",
+    "url": "https://www.copy.ai",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "营销",
+      "文案",
+      "团队"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "icon": "🎵",
+    "desc": "AI 音乐创作平台，通过文本提示生成完整歌曲",
+    "url": "https://suno.com",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "音乐",
+      "生成",
+      "创作"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "icon": "🎙️",
+    "desc": "顶级 AI 语音合成平台，支持多语言语音克隆",
+    "url": "https://elevenlabs.io",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "语音",
+      "合成",
+      "克隆"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "icon": "🎶",
+    "desc": "AI 音乐生成平台，专注高质量音乐创作",
+    "url": "https://www.udio.com",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "音乐",
+      "生成",
+      "创作"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "notionai",
+    "name": "Notion AI",
+    "icon": "📋",
+    "desc": "Notion 内置 AI 写作、总结和知识管理助手",
+    "url": "https://www.notion.so/product/ai",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": [
+      "笔记",
+      "写作",
+      "知识库"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "icon": "📊",
+    "desc": "AI 驱动的演示文稿和文档一键生成工具",
+    "url": "https://gamma.app",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": [
+      "PPT",
+      "文档",
+      "演示"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "aippt",
+    "name": "AiPPT",
+    "icon": "📈",
+    "desc": "AI 快速生成高质量 PPT 的工具",
+    "url": "https://www.aippt.cn",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": [
+      "PPT",
+      "模板"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "icon": "🔍",
+    "desc": "AI 搜索引擎，直接给出带来源引用的答案",
+    "url": "https://www.perplexity.ai",
+    "cat": "ai-search",
+    "cat_name": "AI搜索",
+    "tags": [
+      "搜索",
+      "研究",
+      "引用"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "metaso",
+    "name": "秘塔 AI 搜索",
+    "icon": "🔎",
+    "desc": "无广告直达结果的国产 AI 搜索引擎",
+    "url": "https://metaso.cn",
+    "cat": "ai-search",
+    "cat_name": "AI搜索",
+    "tags": [
+      "搜索",
+      "中文",
+      "研究"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "canva",
+    "name": "Canva AI",
+    "icon": "🎯",
+    "desc": "集成 AI 设计能力的全能设计平台",
+    "url": "https://www.canva.com",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "设计",
+      "排版",
+      "全能"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "napkin",
+    "name": "Napkin",
+    "icon": "📐",
+    "desc": "将文本内容快速转换成演示视觉图的 AI 工具",
+    "url": "https://www.napkin.ai",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "可视化",
+      "图表",
+      "演示"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "flowith",
+    "name": "Flowith",
+    "icon": "🔀",
+    "desc": "一站式 AI 工作台，集成多模型",
+    "url": "https://www.flowith.io",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": [
+      "工作台",
+      "多模型",
+      "效率"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "jasperart",
+    "name": "Jasper Art",
+    "icon": "🖌️",
+    "desc": "Jasper 旗下 AI 绘画工具，面向营销设计",
+    "url": "https://www.jasper.ai/art",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "营销",
+      "设计",
+      "品牌"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "doubao",
+    "name": "豆包",
+    "icon": "🧸",
+    "desc": "字节跳动推出的全能 AI 助手，集成办公创作、知识问答等多场景能力",
+    "url": "https://www.doubao.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话助手",
+      "字节跳动",
+      "多模态"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "tongyi",
+    "name": "通义千问",
+    "icon": "🧿",
+    "desc": "阿里云推出的基于 Qwen 模型的全能 AI 助手，支持文档理解与数据分析",
+    "url": "https://tongyi.aliyun.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话助手",
+      "阿里系",
+      "开源模型"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "wenxin",
+    "name": "文心一言",
+    "icon": "📖",
+    "desc": "百度推出的知识增强大语言模型，深度整合搜索与文心生态",
+    "url": "https://yiyan.baidu.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "对话助手",
+      "百度生态",
+      "知识增强"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "characterai",
+    "name": "Character.AI",
+    "icon": "🎭",
+    "desc": "AI 角色扮演与虚拟角色对话平台，支持用户创建自定义角色",
+    "url": "https://character.ai",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "角色扮演",
+      "虚拟社交",
+      "创意对话"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "poe",
+    "name": "Poe",
+    "icon": "🦚",
+    "desc": "Quora 推出的多模型 AI 聊天平台，一站式访问 GPT-4、Claude 等",
+    "url": "https://poe.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "多模型聚合",
+      "Quora",
+      "Bot商店"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "coze",
+    "name": "扣子 (Coze)",
+    "icon": "🧩",
+    "desc": "字节跳动推出的 AI Bot 开发平台，可快速创建自定义聊天机器人",
+    "url": "https://www.coze.com",
+    "cat": "ai-chat",
+    "cat_name": "AI对话",
+    "tags": [
+      "Bot开发",
+      "工作流",
+      "插件系统"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "leonardo",
+    "name": "Leonardo.ai",
+    "icon": "🎨",
+    "desc": "强大的 AI 图像生成平台，提供精细控制参数和丰富模型库",
+    "url": "https://leonardo.ai",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "文生图",
+      "模型训练",
+      "游戏资产"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "icon": "🖼️",
+    "desc": "以精准文字渲染闻名的 AI 图像生成工具，logo 和海报设计利器",
+    "url": "https://ideogram.ai",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "文字渲染",
+      "Logo生成",
+      "海报设计"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "seaart",
+    "name": "海艺 AI",
+    "icon": "🌊",
+    "desc": "国产 Stable Diffusion 在线平台，海量模型与 LoRA 社区",
+    "url": "https://www.seaart.ai",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "SD在线",
+      "模型社区",
+      "LoRA训练"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "gaoding",
+    "name": "稿定 AI",
+    "icon": "✂️",
+    "desc": "国产 AI 设计平台，专注商业设计场景的智能生成工具",
+    "url": "https://www.gaoding.com",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "商业设计",
+      "电商素材",
+      "智能抠图"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "recraft",
+    "name": "Recraft",
+    "icon": "🎯",
+    "desc": "专注品牌风格统一的 AI 设计工具，支持矢量图形和图标生成",
+    "url": "https://www.recraft.ai",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "矢量图形",
+      "品牌设计",
+      "图标生成"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "tensorart",
+    "name": "Tensor.Art",
+    "icon": "🎭",
+    "desc": "免费 SD 模型在线生成平台，全球最大的 Stable Diffusion 社区之一",
+    "url": "https://tensor.art",
+    "cat": "ai-image",
+    "cat_name": "AI绘画",
+    "tags": [
+      "SD生成",
+      "模型分享",
+      "免费绘图"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "icon": "⚡",
+    "desc": "简单易用的 AI 视频生成平台，支持多种风格和视频编辑功能",
+    "url": "https://pika.art",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "文生视频",
+      "视频风格化",
+      "AI视频编辑"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "luma",
+    "name": "Luma Dream Machine",
+    "icon": "🌌",
+    "desc": "高保真 AI 视频生成模型，物理效果与光影表现力极强",
+    "url": "https://lumalabs.ai",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "视频生成",
+      "物理模拟",
+      "光影渲染"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "capcut",
+    "name": "CapCut / 剪映",
+    "icon": "✂️",
+    "desc": "字节跳动推出的全能视频剪辑 App，集成 AI 自动生成和特效",
+    "url": "https://www.capcut.com",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "视频剪辑",
+      "自动字幕",
+      "AI特效"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "pixverse",
+    "name": "PixVerse",
+    "icon": "🌠",
+    "desc": "爱诗科技推出的国产 AI 视频生成平台，支持多种视频比例和风格",
+    "url": "https://pixverse.ai",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "文生视频",
+      "图生视频",
+      "动画风格"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "invideo",
+    "name": "InVideo AI",
+    "icon": "🎬",
+    "desc": "AI 驱动的视频创作平台，输入主题即可生成完整营销视频",
+    "url": "https://invideo.io",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "营销视频",
+      "模板化",
+      "文字转视频"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "viggle",
+    "name": "Viggle AI",
+    "icon": "🕺",
+    "desc": "让静态角色\"活过来\"的 AI 运动动画工具，支持动作控制",
+    "url": "https://viggle.ai",
+    "cat": "ai-video",
+    "cat_name": "AI视频",
+    "tags": [
+      "运动动画",
+      "角色驱动",
+      "动作迁移"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "icon": "🧪",
+    "desc": "Vercel 推出的 AI 代码生成工具，文本描述即可生成前端 UI 组件",
+    "url": "https://v0.dev",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "前端生成",
+      "React/Next.js",
+      "UI原型"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt.new",
+    "icon": "⚡",
+    "desc": "StackBlitz 推出的浏览器内全栈 AI 编程工具，所见即所得",
+    "url": "https://bolt.new",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "全栈开发",
+      "浏览器IDE",
+      "即时预览"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "replit",
+    "name": "Replit Agent",
+    "icon": "🔄",
+    "desc": "在线 IDE Replit 内置的 AI 编程代理，自然语言创建完整应用",
+    "url": "https://replit.com",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "在线IDE",
+      "AI代理",
+      "快速原型"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "icon": "🦾",
+    "desc": "Cognition AI 推出的世界首个全自主 AI 软件工程师",
+    "url": "https://cognition.ai",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "AI工程师",
+      "自主编程",
+      "全栈开发"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "augment",
+    "name": "Augment Code",
+    "icon": "🔧",
+    "desc": "深懂代码库上下文的 AI 编程助手，准确理解大型项目结构",
+    "url": "https://www.augmentcode.com",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "代码理解",
+      "大项目",
+      "上下文感知"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "icon": "🔮",
+    "desc": "注重隐私的 AI 代码补全助手，支持本地模型部署",
+    "url": "https://www.tabnine.com",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "代码补全",
+      "隐私优先",
+      "本地模型"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "cody",
+    "name": "Cody",
+    "icon": "🦁",
+    "desc": "Sourcegraph 推出的 AI 代码助手，深度理解全代码库",
+    "url": "https://sourcegraph.com/cody",
+    "cat": "ai-code",
+    "cat_name": "AI编程",
+    "tags": [
+      "代码搜索",
+      "代码审查",
+      "全库理解"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "volcwriting",
+    "name": "火山写作",
+    "icon": "🌋",
+    "desc": "字节跳动推出的 AI 写作助手，支持中英文润色和风格改写",
+    "url": "https://www.writingo.net",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "英文写作",
+      "语法检查",
+      "风格改写"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "writesonic",
+    "name": "WriteSonic",
+    "icon": "✍️",
+    "desc": "多功能 AI 内容写作平台，覆盖博客、广告、电商文案",
+    "url": "https://writesonic.com",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "营销文案",
+      "博客生成",
+      "电商描述"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "rytr",
+    "name": "Rytr",
+    "icon": "🖊️",
+    "desc": "性价比极高的 AI 写作助手，30+语种和丰富模板库",
+    "url": "https://rytr.me",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "多语言",
+      "模板化",
+      "性价比"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "iflywriting",
+    "name": "讯飞写作",
+    "icon": "🎤",
+    "desc": "科大讯飞推出的 AI 写作平台，支持语音转文字和智能写作",
+    "url": "https://writing.iflytek.com",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "语音写作",
+      "会议纪要",
+      "讯飞生态"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "wpsai",
+    "name": "WPS AI",
+    "icon": "📄",
+    "desc": "金山 WPS Office 内置的 AI 写作助手，支持文档生成和智能排版",
+    "url": "https://ai.wps.cn",
+    "cat": "ai-writing",
+    "cat_name": "AI写作",
+    "tags": [
+      "办公写作",
+      "文档生成",
+      "WPS生态"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "mubert",
+    "name": "Mubert",
+    "icon": "🎧",
+    "desc": "AI 实时生成背景音乐平台，适合直播、视频和播客",
+    "url": "https://mubert.com",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "背景音乐",
+      "实时生成",
+      "免版权"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "soundraw",
+    "name": "Soundraw",
+    "icon": "🎵",
+    "desc": "AI 音乐创作工具，用户可自定义曲风、节奏和乐器组合",
+    "url": "https://soundraw.io",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "自定义创作",
+      "免版税",
+      "音乐制作"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "boomy",
+    "name": "Boomy",
+    "icon": "🎹",
+    "desc": "任何人都能在几秒内创作完整歌曲的 AI 音乐平台",
+    "url": "https://boomy.com",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "快速创作",
+      "音乐发布",
+      "简单易用"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "aiva",
+    "name": "AIVA",
+    "icon": "🎻",
+    "desc": "专注古典和电影配乐的 AI 作曲助手，可商用授权",
+    "url": "https://www.aiva.ai",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "古典音乐",
+      "影视配乐",
+      "商用授权"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "voicemod",
+    "name": "Voicemod",
+    "icon": "🎤",
+    "desc": "实时 AI 变声器，支持游戏、直播和社交场景中变换声音",
+    "url": "https://www.voicemod.net",
+    "cat": "ai-audio",
+    "cat_name": "AI音频",
+    "tags": [
+      "实时变声",
+      "游戏语音",
+      "直播效果"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "beautifulai",
+    "name": "Beautiful.ai",
+    "icon": "🌟",
+    "desc": "AI 自动排版的演示文稿工具，输入内容即可生成精美 PPT",
+    "url": "https://www.beautiful.ai",
+    "cat": "ai-productivity",
+    "cat_name": "AI效率",
+    "tags": [
+      "自动排版",
+      "PPT生成",
+      "设计自动化"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "icon": "📚",
+    "desc": "AI 驱动的叙事型演示工具，擅长生成故事化的多媒体 PPT",
+    "url": "https://tome.app",
+    "cat": "ai-productivity",
+    "cat_name": "AI效率",
+    "tags": [
+      "叙事演示",
+      "多媒体",
+      "故事化"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "slidesai",
+    "name": "SlidesAI",
+    "icon": "🎞️",
+    "desc": "Google Slides 插件，输入文字即可一键生成完整幻灯片",
+    "url": "https://www.slidesai.io",
+    "cat": "ai-productivity",
+    "cat_name": "AI效率",
+    "tags": [
+      "Google插件",
+      "一键生成",
+      "幻灯片"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "mem",
+    "name": "Mem",
+    "icon": "🧠",
+    "desc": "AI 原生笔记工具，自动整理、关联和搜索你的知识库",
+    "url": "https://mem.ai",
+    "cat": "ai-productivity",
+    "cat_name": "AI效率",
+    "tags": [
+      "AI笔记",
+      "知识管理",
+      "自动关联"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "otter",
+    "name": "Otter.ai",
+    "icon": "🦦",
+    "desc": "AI 会议记录助手，实时转写和自动生成会议摘要",
+    "url": "https://otter.ai",
+    "cat": "ai-productivity",
+    "cat_name": "AI效率",
+    "tags": [
+      "会议记录",
+      "实时转录",
+      "自动摘要"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "fireflies",
+    "name": "Fireflies.ai",
+    "icon": "🪲",
+    "desc": "AI 会议助手，自动记录、转录和总结各平台会议内容",
+    "url": "https://fireflies.ai",
+    "cat": "ai-productivity",
+    "cat_name": "AI效率",
+    "tags": [
+      "会议转录",
+      "自动总结",
+      "多平台"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "icon": "🔍",
+    "desc": "面向开发者的 AI 搜索引擎，精于回答技术编程类问题",
+    "url": "https://www.phind.com",
+    "cat": "ai-search",
+    "cat_name": "AI搜索",
+    "tags": [
+      "开发者搜索",
+      "技术问答",
+      "代码查询"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "you",
+    "name": "You.com",
+    "icon": "🌐",
+    "desc": "可自定义的 AI 搜索引擎，支持多种 AI 模式和隐私保护",
+    "url": "https://you.com",
+    "cat": "ai-search",
+    "cat_name": "AI搜索",
+    "tags": [
+      "AI搜索",
+      "自定义模式",
+      "隐私保护"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "icon": "📊",
+    "desc": "AI 学术搜索引擎，直接从论文中提取研究共识和结论",
+    "url": "https://consensus.app",
+    "cat": "ai-search",
+    "cat_name": "AI搜索",
+    "tags": [
+      "学术搜索",
+      "论文查询",
+      "研究助手"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "icon": "🧪",
+    "desc": "AI 科研助手，自动分析论文提取关键发现和方法论",
+    "url": "https://elicit.com",
+    "cat": "ai-search",
+    "cat_name": "AI搜索",
+    "tags": [
+      "科研助手",
+      "论文分析",
+      "文献综述"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "designsai",
+    "name": "Designs.ai",
+    "icon": "🎨",
+    "desc": "一站式 AI 设计平台，覆盖 Logo、视频、海报和社交媒体素材",
+    "url": "https://designs.ai",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "Logo设计",
+      "视频制作",
+      "品牌设计"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "uizard",
+    "name": "Uizard",
+    "icon": "🦎",
+    "desc": "AI 驱动的 UI/UX 设计工具，草图转可交互原型",
+    "url": "https://uizard.io",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "UI设计",
+      "原型制作",
+      "草图转数字"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "galileoai",
+    "name": "Galileo AI",
+    "icon": "🚀",
+    "desc": "文本描述即可生成高保真 UI 设计稿的 AI 设计助手",
+    "url": "https://www.usegalileo.ai",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "UI生成",
+      "高保真",
+      "Figma集成"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "khroma",
+    "name": "Khroma",
+    "icon": "🌈",
+    "desc": "AI 配色方案生成工具，学习你的色彩偏好并推荐调色板",
+    "url": "https://www.khroma.co",
+    "cat": "ai-design",
+    "cat_name": "AI设计",
+    "tags": [
+      "配色方案",
+      "调色板",
+      "色彩学习"
+    ],
+    "price": "Free"
+  },
+  {
+    "id": "adcreative",
+    "name": "AdCreative.ai",
+    "icon": "📢",
+    "desc": "AI 广告创意生成平台，自动优化广告文案和视觉素材",
+    "url": "https://www.adcreative.ai",
+    "cat": "ai-marketing",
+    "cat_name": "AI营销",
+    "tags": [
+      "广告创意",
+      "投放优化",
+      "A/B测试"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "anyword",
+    "name": "Anyword",
+    "icon": "🎯",
+    "desc": "AI 营销文案优化平台，实时预测文案转化效果",
+    "url": "https://anyword.com",
+    "cat": "ai-marketing",
+    "cat_name": "AI营销",
+    "tags": [
+      "文案优化",
+      "转化预测",
+      "A/B测试"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "hubspotai",
+    "name": "HubSpot AI",
+    "icon": "📊",
+    "desc": "HubSpot CRM 内置的 AI 营销工具，智能生成邮件和内容",
+    "url": "https://www.hubspot.com/ai",
+    "cat": "ai-marketing",
+    "cat_name": "AI营销",
+    "tags": [
+      "CRM集成",
+      "营销自动化",
+      "邮件生成"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "duolingomax",
+    "name": "Duolingo Max",
+    "icon": "🦉",
+    "desc": "Duolingo 推出的 GPT-4 驱动的 AI 语言学习助手",
+    "url": "https://www.duolingo.com",
+    "cat": "ai-education",
+    "cat_name": "AI教育",
+    "tags": [
+      "语言学习",
+      "GPT-4",
+      "角色对话"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "khanmigo",
+    "name": "Khanmigo",
+    "icon": "🎓",
+    "desc": "Khan Academy 推出的 AI 个性化学习辅导老师",
+    "url": "https://www.khanacademy.org/khan-labs",
+    "cat": "ai-education",
+    "cat_name": "AI教育",
+    "tags": [
+      "课程辅导",
+      "个性化学习",
+      "K-12教育"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "quizlet",
+    "name": "Quizlet Q-Chat",
+    "icon": "📝",
+    "desc": "Quizlet 推出的 AI 学习助手，基于学习内容生成问答互动",
+    "url": "https://quizlet.com",
+    "cat": "ai-education",
+    "cat_name": "AI教育",
+    "tags": [
+      "单词学习",
+      "互动问答",
+      "考试备考"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "icon": "✨",
+    "desc": "AI 写作语法校对和风格润色工具，支持全平台集成",
+    "url": "https://www.grammarly.com",
+    "cat": "ai-education",
+    "cat_name": "AI教育",
+    "tags": [
+      "语法检查",
+      "风格优化",
+      "写作辅助"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "taskade",
+    "name": "Taskade",
+    "icon": "✅",
+    "desc": "AI 驱动的团队协作和任务管理平台，结合笔记和看板",
+    "url": "https://www.taskade.com",
+    "cat": "efficiency",
+    "cat_name": "AI效率",
+    "tags": [
+      "任务管理",
+      "团队协作",
+      "AI自动化"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "motion",
+    "name": "Motion",
+    "icon": "📅",
+    "desc": "AI 智能日程规划工具，自动安排工作任务和会议",
+    "url": "https://www.usemotion.com",
+    "cat": "efficiency",
+    "cat_name": "AI效率",
+    "tags": [
+      "日程管理",
+      "自动规划",
+      "时间优化"
+    ],
+    "price": "Paid"
+  },
+  {
+    "id": "reclaim",
+    "name": "Reclaim.ai",
+    "icon": "🕰️",
+    "desc": "AI 日历助手，自动保护专注时间并优化日程冲突",
+    "url": "https://reclaim.ai",
+    "cat": "efficiency",
+    "cat_name": "AI效率",
+    "tags": [
+      "日历管理",
+      "专注时间",
+      "自动排程"
+    ],
+    "price": "Freemium"
+  },
+  {
+    "id": "hix",
+    "name": "Hix.ai",
+    "icon": "🌍",
+    "desc": "AI 写作和多语言翻译平台，支持 50+ 语种的内容创作",
+    "url": "https://hix.ai",
+    "cat": "efficiency",
+    "cat_name": "AI效率",
+    "tags": [
+      "多语言翻译",
+      "AI写作",
+      "视频本地化"
+    ],
+    "price": "Freemium"
+  }
+]
