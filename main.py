@@ -27,7 +27,34 @@ env = Environment(loader=FileSystemLoader(f"{BASE}/templates"))
 _tools_cache = None
 _tools_cache_time = 0
 TOOLS_CACHE_TTL = 300  # 5 minutes
-_visit_count = 0
+
+# 访问统计（持久化到文件）
+STATS_FILE = f"{BASE}/data/visits.json"
+
+def _load_stats():
+    if os.path.exists(STATS_FILE):
+        with open(STATS_FILE) as f:
+            return json.load(f)
+    return {"total": 0, "pages": {"home": 0, "category": 0, "tool": 0}, "daily": {}, "categories": {}, "tools": {}}
+
+def _save_stats(s):
+    with open(STATS_FILE, "w") as f:
+        json.dump(s, f, ensure_ascii=False, indent=2)
+
+def track_visit(page, extra=None):
+    s = _load_stats()
+    today = time.strftime("%Y-%m-%d")
+    s["total"] += 1
+    s["pages"][page] = s["pages"].get(page, 0) + 1
+    if today not in s["daily"]:
+        s["daily"][today] = {}
+    s["daily"][today][page] = s["daily"][today].get(page, 0) + 1
+    if extra:
+        if page == "category":
+            s["categories"][extra] = s["categories"].get(extra, 0) + 1
+        elif page == "tool":
+            s["tools"][extra] = s["tools"].get(extra, 0) + 1
+    _save_stats(s)
 
 def load_tools():
     global _tools_cache, _tools_cache_time
@@ -45,7 +72,8 @@ def load_tools():
 
 @app.get("/health")
 async def health():
-    return JSONResponse({"status": "ok", "visit_count": _visit_count, "tools_count": len(load_tools())})
+    s = _load_stats()
+    return JSONResponse({"status": "ok", "visit_count": s["total"], "tools_count": len(load_tools())})
 
 @app.get("/robots.txt", response_class=Response)
 async def robots():
@@ -75,8 +103,7 @@ async def sitemap():
 
 @app.get("/", response_class=HTMLResponse)
 async def home(q: str = Query(default=""), cat: str = Query(default="")):
-    global _visit_count
-    _visit_count += 1
+    track_visit("home")
     tools = load_tools()
     cats = sorted(set(t["cat_name"] for t in tools))
     if q:
@@ -102,6 +129,7 @@ async def home(q: str = Query(default=""), cat: str = Query(default="")):
 async def category(slug: str):
     tools = [t for t in load_tools() if t["cat"] == slug]
     if not tools: return env.get_template("404.html").render()
+    track_visit("category", tools[0]["cat_name"])
     return env.get_template("category.html").render(tools=tools, cat_name=tools[0]["cat_name"])
 
 @app.get("/tool/{tool_id}", response_class=HTMLResponse)
@@ -109,8 +137,32 @@ async def tool_detail(tool_id: str, request: Request):
     tools = load_tools()
     tool = next((t for t in tools if t["id"] == tool_id), None)
     if not tool: return env.get_template("404.html").render()
+    track_visit("tool", tool["id"])
     related = [t for t in tools if t["cat"] == tool["cat"] and t["id"] != tool_id][:4]
     return env.get_template("tool.html").render(tool=tool, related=related, request=request)
+
+@app.get("/stats", response_class=HTMLResponse)
+async def stats():
+    s = _load_stats()
+    today = time.strftime("%Y-%m-%d")
+    today_stats = s["daily"].get(today, {})
+    # 热门分类 top 10
+    top_cats = sorted(s["categories"].items(), key=lambda x: -x[1])[:10]
+    # 热门工具 top 20
+    top_tools_raw = sorted(s["tools"].items(), key=lambda x: -x[1])[:20]
+    all_tools = {t["id"]: t for t in load_tools()}
+    top_tools = [(all_tools.get(tid, {"name": tid}), cnt) for tid, cnt in top_tools_raw]
+    # 最近 7 天趋势
+    from datetime import datetime, timedelta
+    days = []
+    for i in range(6, -1, -1):
+        d = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
+        day_data = s["daily"].get(d, {})
+        days.append({"date": d, "total": sum(day_data.values()), "detail": day_data})
+    return env.get_template("stats.html").render(
+        stats=s, today=today_stats, today_date=today,
+        top_cats=top_cats, top_tools=top_tools, days=days
+    )
 
 # Google verification: serve google*.html from static/ at root (must be last)
 @app.get("/{filename}", response_class=HTMLResponse)

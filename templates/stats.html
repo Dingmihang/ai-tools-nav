@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>访问统计 — AI工具导航</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<style>
+  .stats-page { max-width: 900px; margin: 0 auto; padding: 60px 20px 40px; }
+  .stats-page h1 { font-size: 28px; margin-bottom: 30px; text-align: center; }
+  .stat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+  .stat-card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-card .num { font-size: 32px; font-weight: 700; color: #7c5cfc; }
+  .stat-card .label { font-size: 13px; color: #888; margin-top: 4px; }
+  .section-title { font-size: 18px; font-weight: 600; margin: 30px 0 16px; color: #ccc; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+  th { text-align: left; padding: 10px 12px; border-bottom: 2px solid #2a2a4a; color: #888; font-size: 13px; font-weight: 500; }
+  td { padding: 10px 12px; border-bottom: 1px solid #1a1a2e; color: #ccc; font-size: 14px; }
+  .rank { color: #7c5cfc; font-weight: 600; width: 30px; }
+  .bar-wrap { width: 100px; height: 6px; background: #2a2a4a; border-radius: 3px; display: inline-block; vertical-align: middle; margin-left: 8px; }
+  .bar-fill { height: 6px; background: #7c5cfc; border-radius: 3px; }
+  .day-row td { font-size: 13px; }
+  .day-bar { display: inline-block; height: 6px; background: #5a4af4; border-radius: 3px; vertical-align: middle; margin-left: 8px; min-width: 2px; }
+  .zero { color: #555; }
+  .nav-links a[href="/stats"] { color: #7c5cfc; }
+  @media (max-width: 600px) {
+    .stat-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🤖 AI工具导航</a>
+    <div class="nav-links"><a href="/#categories">分类</a><a href="/stats" style="color:#7c5cfc">统计</a></div>
+  </div>
+</nav>
+
+<div class="stats-page">
+  <h1>📊 访问统计</h1>
+
+  <div class="stat-cards">
+    <div class="stat-card">
+      <div class="num">{{ stats.total }}</div>
+      <div class="label">累计 PV</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">{{ today.get('home', 0) + today.get('category', 0) + today.get('tool', 0) }}</div>
+      <div class="label">今日 PV</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">{{ stats.pages.tool }}</div>
+      <div class="label">工具页访问</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">{{ stats.categories.keys()|list|length }}</div>
+      <div class="label">活跃分类</div>
+    </div>
+  </div>
+
+  <div class="section-title">📅 最近 7 天趋势</div>
+  <table>
+    <tr><th>日期</th><th>首页</th><th>分类</th><th>工具</th><th>合计</th><th></th></tr>
+    {% set max_day = days|map(attribute='total')|max or 1 %}
+    {% for d in days %}
+    <tr class="day-row">
+      <td>{{ d.date }}</td>
+      <td>{{ d.detail.get('home', 0) }}</td>
+      <td>{{ d.detail.get('category', 0) }}</td>
+      <td>{{ d.detail.get('tool', 0) }}</td>
+      <td><strong>{{ d.total }}</strong></td>
+      <td><span class="day-bar" style="width:{{ (d.total / max_day * 100)|int if max_day > 0 else 0 }}px"></span></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% if top_cats %}
+  <div class="section-title">🏷️ 热门分类 Top 10</div>
+  <table>
+    <tr><th>#</th><th>分类</th><th>访问量</th></tr>
+    {% set max_cat = top_cats[0][1] if top_cats else 1 %}
+    {% for cat, cnt in top_cats %}
+    <tr>
+      <td class="rank">{{ loop.index }}</td>
+      <td>{{ cat }}</td>
+      <td>{{ cnt }} <span class="bar-wrap"><span class="bar-fill" style="width:{{ (cnt / max_cat * 100)|int }}%"></span></span></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+
+  {% if top_tools %}
+  <div class="section-title">🔧 热门工具 Top 20</div>
+  <table>
+    <tr><th>#</th><th>工具</th><th>访问量</th></tr>
+    {% set max_tool = top_tools[0][1] if top_tools else 1 %}
+    {% for tool, cnt in top_tools %}
+    <tr>
+      <td class="rank">{{ loop.index }}</td>
+      <td><a href="/tool/{{ tool.id }}" style="color:#7c5cfc">{{ tool.name }}</a></td>
+      <td>{{ cnt }} <span class="bar-wrap"><span class="bar-fill" style="width:{{ (cnt / max_tool * 100)|int }}%"></span></span></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+</div>
+
+</body>
+</html>
