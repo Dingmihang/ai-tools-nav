@@ -1347,5 +1347,181 @@
       "视频本地化"
     ],
     "price": "Freemium"
+  },
+  {
+    "id": "feishu-ai",
+    "name": "飞书智能助手",
+    "icon": "💡",
+    "desc": "飞书内置AI助手，支持文档写作、会议纪要、智能问答与知识管理",
+    "url": "https://www.feishu.cn/intelligent-assistant",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["文档协作", "智能问答", "会议纪要"],
+    "price": "Freemium"
+  },
+  {
+    "id": "dingtalk-ai",
+    "name": "钉钉AI",
+    "icon": "🐦",
+    "desc": "钉钉智能助理矩阵，含AI文档、AI表格、AI听记和AI搜索",
+    "url": "https://docs.dingtalk.com/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["智能文档", "办公套件", "AI助理"],
+    "price": "Freemium"
+  },
+  {
+    "id": "wps-ai",
+    "name": "WPS AI",
+    "icon": "📄",
+    "desc": "金山办公旗下AI应用，提供AI写作、AI生成PPT、表格分析等能力",
+    "url": "https://ai.wps.cn/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["文档写作", "PPT生成", "表格分析"],
+    "price": "Freemium"
+  },
+  {
+    "id": "tencent-docs-ai",
+    "name": "腾讯文档AI",
+    "icon": "📝",
+    "desc": "腾讯在线文档内置AI能力，支持智能写作、翻译、校对和格式化",
+    "url": "https://docs.qq.com/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["在线协作", "智能写作", "文档处理"],
+    "price": "Free"
+  },
+  {
+    "id": "shimo",
+    "name": "石墨文档",
+    "icon": "🪨",
+    "desc": "云端Office协作平台，支持多人实时编辑文档表格和幻灯片",
+    "url": "https://shimo.im/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["文档协作", "在线表格", "云端办公"],
+    "price": "Freemium"
+  },
+  {
+    "id": "miro-ai",
+    "name": "Miro AI",
+    "icon": "🎨",
+    "desc": "AI驱动的无限画布协作白板，支持头脑风暴、图表和流程设计",
+    "url": "https://miro.com/ai/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["智能白板", "头脑风暴", "团队协作"],
+    "price": "Freemium"
+  },
+  {
+    "id": "boardmix",
+    "name": "BoardMix博思白板",
+    "icon": "✏️",
+    "desc": "AI在线协作白板，自动生成思维导图、PPT和流程图",
+    "url": "https://boardmix.cn/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["AI白板", "思维导图", "协作工具"],
+    "price": "Freemium"
+  },
+  {
+    "id": "xmind-ai",
+    "name": "Xmind AI",
+    "icon": "🧠",
+    "desc": "AI驱动的思维导图和头脑风暴工具，快速梳理思路和结构",
+    "url": "https://xmind.ai/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["思维导图", "头脑风暴", "AI辅助"],
+    "price": "Freemium"
+  },
+  {
+    "id": "processon",
+    "name": "ProcessOn",
+    "icon": "🔗",
+    "desc": "在线流程图和思维导图工具，支持多人实时协作和专业绘图",
+    "url": "https://www.processon.com/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["流程图", "思维导图", "在线作图"],
+    "price": "Freemium"
+  },
+  {
+    "id": "otter-ai",
+    "name": "Otter.ai",
+    "icon": "🦦",
+    "desc": "AI会议笔记员，自动转录、总结会议并提取行动项",
+    "url": "https://otter.ai/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["会议转录", "AI纪要", "语音识别"],
+    "price": "Freemium"
+  },
+  {
+    "id": "fireflies-ai",
+    "name": "Fireflies.ai",
+    "icon": "🔥",
+    "desc": "AI会议助手，自动转录、分析并为700+工具推送会议洞察",
+    "url": "https://fireflies.ai/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["会议转录", "销售洞察", "CRM集成"],
+    "price": "Freemium"
+  },
+  {
+    "id": "feishu-minutes",
+    "name": "飞书妙记",
+    "icon": "🎙️",
+    "desc": "飞书AI语音识别转文字，自动生成会议纪要和待办事项",
+    "url": "https://www.feishu.cn/product/minutes",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["语音转文字", "会议纪要", "飞书生态"],
+    "price": "Freemium"
+  },
+  {
+    "id": "tingwu",
+    "name": "通义听悟",
+    "icon": "👂",
+    "desc": "阿里云音视频AI助手，自动转写、总结和分析会议与学习内容",
+    "url": "https://tingwu.aliyun.com/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["音视频转写", "AI笔记", "会议分析"],
+    "price": "Freemium"
+  },
+  {
+    "id": "coda-ai",
+    "name": "Coda AI",
+    "icon": "📊",
+    "desc": "融合文档与表格的AI协作空间，内置智能写作和数据分析",
+    "url": "https://coda.io/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["智能文档", "协作空间", "数据分析"],
+    "price": "Freemium"
+  },
+  {
+    "id": "craft",
+    "name": "Craft",
+    "icon": "📘",
+    "desc": "苹果生态AI笔记和文档应用，支持日常笔记、任务和日历管理",
+    "url": "https://www.craft.do/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["笔记应用", "文档编辑", "Apple生态"],
+    "price": "Freemium"
+  },
+  {
+    "id": "taskade",
+    "name": "Taskade",
+    "icon": "✅",
+    "desc": "AI工作流和任务管理平台，集成AI代理与自动化工作流",
+    "url": "https://www.taskade.com/",
+    "cat": "ai-office",
+    "cat_name": "AI办公",
+    "tags": ["任务管理", "AI工作流", "团队协作"],
+    "price": "Freemium"
   }
 ]

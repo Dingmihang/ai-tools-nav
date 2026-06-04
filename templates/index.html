@@ -2,8 +2,9 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AI工具导航 — 发现最好用的 AI 工具大全</title>
-<meta name="description" content="收录 90+ 精选 AI 工具，覆盖对话、绘画、视频、编程、写作、设计等 12 大品类。搜索工具名直接跳转。">
+<title>AI工具导航 - 收录90+款AI对话、绘画、编程、视频、写作工具大全</title>
+<meta name="description" content="收录90+款精选AI工具，覆盖AI对话、AI绘画、AI视频、AI编程、AI写作、AI音频等12大品类。搜索工具名一键直达官网，持续更新。">
+<link rel="canonical" href="{{ SITE_URL }}/">
 <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -56,6 +57,29 @@
   </div></div>
 </section>
 
+{% if search_no_result %}
+<section class="section" style="text-align:center">
+  <h2 style="font-size:22px;color:#64748B;margin-bottom:24px">未找到「<strong style="color:#1E293B">{{ search_query }}</strong>」，试试这些热门工具</h2>
+  <div class="grid">
+    {% for t in hot_tools %}
+    <a href="/tool/{{ t.id }}" class="card">
+      <img class="card-icon" src="{{ t.favicon }}" alt="{{ t.name }}" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-name">{{ t.name }}</div>
+      <div class="card-desc">{{ t.desc }}</div>
+      <div class="card-meta">
+        <span class="card-cat">{{ t.cat_name }}</span>
+        <span class="card-price price-{{ t.price|lower }}">{{ t.price }}</span>
+      </div>
+      <div class="card-hover-btn">访问 →</div>
+    </a>
+    {% endfor %}
+  </div>
+  <div style="margin-top:36px">
+    <h3 style="font-size:16px;color:#64748B;margin-bottom:16px">或者浏览分类</h3>
+    <div class="cat-list" style="justify-content:center">{% for cat in categories %}<a href="/?cat={{ cat }}" class="cat-tag">{{ cat }}</a>{% endfor %}</div>
+  </div>
+</section>
+{% else %}
 <section class="section">
   <div class="section-header">
     <h2>🛠️ {% if active_cat %}{{ active_cat }}{% else %}全部工具{% endif %}</h2>
@@ -77,6 +101,7 @@
     {% endfor %}
   </div>
 </section>
+{% endif %}
 
 <section class="cta"><h2>没找到你想要的？</h2><p>提交你的 AI 工具，加入精选目录</p>
   <form class="cta-form" onsubmit="event.preventDefault();alert('感谢提交！')">

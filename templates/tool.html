@@ -2,9 +2,9 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>{{ tool.name }} - AI工具导航 | {{ tool.cat_name }}工具推荐</title>
-<meta name="description" content="{{ tool.name }}：{{ tool.desc }}。访问官网了解更多。">
-<link rel="canonical" href="{{ request.url }}">
+<title>{{ tool.name }} | AI工具导航</title>
+<meta name="description" content="{{ tool.desc }}">
+<link rel="canonical" href="{{ SITE_URL }}/tool/{{ tool.id }}">
 <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -49,6 +49,17 @@
       </div>
       <div class="card-hover-btn">访问 →</div>
     </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if other_cats %}
+<section class="section">
+  <div class="section-header"><h2>🔍 探索其他分类</h2></div>
+  <div class="cat-list" style="justify-content:center;flex-wrap:wrap">
+    {% for cn in other_cats %}
+    <a href="/?cat={{ cn }}" class="cat-tag">{{ cn }}</a>
     {% endfor %}
   </div>
 </section>

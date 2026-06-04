@@ -106,13 +106,18 @@ async def home(q: str = Query(default=""), cat: str = Query(default="")):
     track_visit("home")
     tools = load_tools()
     cats = sorted(set(t["cat_name"] for t in tools))
+    search_no_result = False
+    search_query = ""
     if q:
         ql = q.lower().strip()
+        search_query = q
         match = [t for t in tools if t["name"].lower() == ql]
         if not match:
             match = [t for t in tools if ql in t["name"].lower()]
         if match:
             return RedirectResponse(f"/tool/{match[0]['id']}", status_code=302)
+        else:
+            search_no_result = True
     if cat:
         tools = [t for t in tools if t["cat_name"] == cat]
     # Build cat_counts for display
@@ -121,8 +126,13 @@ async def home(q: str = Query(default=""), cat: str = Query(default="")):
     for t in all_tools:
         cn = t["cat_name"]
         cat_counts[cn] = cat_counts.get(cn, 0) + 1
+    # Hot tools for no-result suggestions
+    hot_ids = ["chatgpt", "claude", "deepseek", "midjourney", "cursor", "suno"]
+    hot_tools = [t for t in all_tools if t["id"] in hot_ids]
     return env.get_template("index.html").render(
-        tools=tools, categories=cats, active_cat=cat, cat_counts=cat_counts
+        tools=tools, categories=cats, active_cat=cat, cat_counts=cat_counts,
+        search_no_result=search_no_result, search_query=search_query, hot_tools=hot_tools,
+        SITE_URL=SITE_URL
     )
 
 @app.get("/category/{slug}", response_class=HTMLResponse)
@@ -130,7 +140,7 @@ async def category(slug: str):
     tools = [t for t in load_tools() if t["cat"] == slug]
     if not tools: return env.get_template("404.html").render()
     track_visit("category", tools[0]["cat_name"])
-    return env.get_template("category.html").render(tools=tools, cat_name=tools[0]["cat_name"])
+    return env.get_template("category.html").render(tools=tools, cat_name=tools[0]["cat_name"], SITE_URL=SITE_URL, slug=slug)
 
 @app.get("/tool/{tool_id}", response_class=HTMLResponse)
 async def tool_detail(tool_id: str, request: Request):
@@ -138,8 +148,15 @@ async def tool_detail(tool_id: str, request: Request):
     tool = next((t for t in tools if t["id"] == tool_id), None)
     if not tool: return env.get_template("404.html").render()
     track_visit("tool", tool["id"])
-    related = [t for t in tools if t["cat"] == tool["cat"] and t["id"] != tool_id][:4]
-    return env.get_template("tool.html").render(tool=tool, related=related, request=request)
+    related = [t for t in tools if t["cat"] == tool["cat"] and t["id"] != tool_id][:8]
+    # 随机选 4-6 个不同分类（排除当前工具的分类）
+    import random
+    all_cats = sorted(set(t["cat_name"] for t in tools if t["cat"] != tool["cat"]))
+    random.shuffle(all_cats)
+    other_cats = all_cats[:6]
+    return env.get_template("tool.html").render(
+        tool=tool, related=related, other_cats=other_cats, request=request, SITE_URL=SITE_URL
+    )
 
 @app.get("/stats", response_class=HTMLResponse)
 async def stats():
